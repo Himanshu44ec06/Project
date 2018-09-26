@@ -1,0 +1,25 @@
+{
+  "name": "project",
+  "version": "0.0.1",
+  "description": "first version of Ishine",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 15000 --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Himanshu44ec06/Project.git"
+  },
+  "author": "himanshu parkash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Himanshu44ec06/Project/issues"
+  },
+  "homepage": "https://github.com/Himanshu44ec06/Project#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "mongoose": "^5.2.17"
+  }
+}
