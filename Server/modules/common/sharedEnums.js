@@ -14,7 +14,8 @@ module.exports  = {
         "SERVERERROR" : 500,
     },
     moduleRoute  : {
-        "SERVICES" : 'service' 
+        "SERVICES" : 'service',
+        "VENDOR" : 'vendor',
     },
 
     userType  : {
