@@ -46,7 +46,7 @@ var app  =  ((function(){
         //  Register ModulesRoute
 
         // services Route  
-        const serviceRoute = require('../modules/services/servieRoute');
+        const serviceRoute = require('../modules/services/route');
         appObject.use('/api/' + serviceRoute.path, serviceRoute.protected);
         appObject.use('/api/' + serviceRoute.path, serviceRoute.unprotected);
 
