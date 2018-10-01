@@ -16,6 +16,7 @@ module.exports  = {
     moduleRoute  : {
         "SERVICES" : 'service',
         "VENDOR" : 'vendor',
+        "COMMON" :  'common'
     },
 
     userType  : {
