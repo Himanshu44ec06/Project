@@ -46,10 +46,9 @@ var app  =  ((function(){
         //  Register ModulesRoute
 
         // services Route  
-        const serviceRoute = require('../modules/services/route');
-        appObject.use('/api/' + serviceRoute.path, serviceRoute.protected);
-        appObject.use('/api/' + serviceRoute.path, serviceRoute.unprotected);
-
+        const commonRoute = require('../modules/common/routes');
+        appObject.use('/api/' + commonRoute.path, commonRoute.protected);
+        appObject.use('/api/' + commonRoute.path, commonRoute.unprotected);
 
     }
 
