@@ -11,6 +11,8 @@ var app  =  ((function(){
     App.prototype.start =  function(){
         const appObject  = express();
         appObject.use(bodyparser.json());
+        appObject.use(express.json());
+        appObject.use(express.urlencoded({ extended: true }));
 
         appObject.options('*', cors());
         appObject.use(function (req, res, next) {
@@ -39,12 +41,18 @@ var app  =  ((function(){
 
     };
     App.prototype.registerRoutes = function(appObject){
-        appObject.use("/api",(req,res,next)=>{
-                res.send("I am  API");
-        });
+        
+        
+        //  Register ModulesRoute
+
+        // services Route  
+        const serviceRoute = require('../modules/services/servieRoute');
+        appObject.use('/api/' + serviceRoute.path, serviceRoute.protected);
+        appObject.use('/api/' + serviceRoute.path, serviceRoute.unprotected);
+
+
     }
 
-    App.prototype.static
 
     var  instance;
 
