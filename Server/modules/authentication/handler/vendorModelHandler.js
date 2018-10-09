@@ -44,9 +44,11 @@ module.exports = {
     createNew : function(model){
         VendorModel.find({username : model.username}).then((user)=>{
             if(user.length > 0)
-              return   Promise.reject(SharedEnum.errorMesaageCode["EUsernameAlreadyExist"]);
+                return Promise.resolve(user);
+            
             var model  = new VendorModel({
-                username = model.username
+                username = model.username,
+                status  =  sharedEnums.vendorStatus.REGISTEREDBUTOTPNOTVERIFIED
             });
 
             model.save().then((response)=>{

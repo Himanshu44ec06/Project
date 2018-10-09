@@ -25,8 +25,15 @@ module.exports  = {
 
     userType  : {
         Vendor : 1
-    } ,
-
+    },
+    vendorStatus : {
+      "REGISTEREDBUTOTPNOTVERIFIED" : 1,
+      "ASKFORPASSWORD" : 2,
+      "INFOREQUIRED" : 3,
+      "ACTIVE" : 4,
+      "INACTIVE" :  5,
+      "ACTIVEBUTNOBOOKING" : 6    
+    },
     errorMesaageCode  : {
         "EService01" : "EService01", // Service  name is  not correct
         "EService02" : "EService02", // Serice  name is  not unique
