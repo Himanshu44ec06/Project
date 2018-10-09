@@ -5,8 +5,10 @@ module.exports  = {
     errorType : {
         "VALIDATION"  : "ValidationError"
 
-    }
-    ,
+    },
+    configuration: {
+        "OTPLENGTH" : 4
+    },
     responseCode  : {
         "SUCCESS" :  200,
         "CREATED" :  201,
@@ -34,6 +36,9 @@ module.exports  = {
         "ELoginUserDisable" : "ELoginUserDisable",
         "ELoginPasswordNotMatch" : "ELoginPasswordNotMatch",
         "EUsernameAlreadyExist": "EUsernameAlreadyExist", 
+        "EUserCreatedFailed" : "EUserCreatedFailed",
+        "EOTPUnableToGenerate" : "EOTPUnableToGenerate",
+        "EInValidOtp" : "EInValidOtp"
 
     }
 

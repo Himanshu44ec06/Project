@@ -47,13 +47,12 @@ module.exports = {
               return   Promise.reject(SharedEnum.errorMesaageCode["EUsernameAlreadyExist"]);
             var model  = new VendorModel({
                 username = model.username
-
             });
 
             model.save().then((response)=>{
-                    
+                    return   Promise.resolve(response);
             }).catch((err)=>{
-
+                return   Promise.reject(SharedEnum.errorMesaageCode["EUserCreatedFailed"]);
             })
 
         }).catch((err)=>{});
