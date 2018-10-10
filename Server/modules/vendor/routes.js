@@ -4,11 +4,11 @@ Controller  = require('./controller/vendorController'),
 ProtectedRoute =  express.Router(),
 Route = express.Router();
 
-var controller  = new Controller();
 
-ProtectedRoute.route('/').post(controller.AddNewService);
-ProtectedRoute.route('/').get(controller.GetAllService);
-ProtectedRoute.route('/:vendorId').post(controller.AlterService);
+ProtectedRoute.route('/steps').get(Controller.VendorRegistrationStep);
+//ProtectedRoute.route('/').post(controller.AddNewService);
+//ProtectedRoute.route('/').get(controller.GetAllService);
+//ProtectedRoute.route('/:vendorId').post(controller.AlterService);
 
 
 module.exports = {

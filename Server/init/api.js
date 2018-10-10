@@ -50,6 +50,10 @@ var app  =  ((function(){
         appObject.use('/api/' + commonRoute.path, commonRoute.protected);
         appObject.use('/api/' + commonRoute.path, commonRoute.unprotected);
 
+        const  vendorRoute = require('../modules/vendor/routes');
+        appObject.use('/api/' + vendorRoute.path, vendorRoute.protected);
+        appObject.use('/api/' + vendorRoute.path, vendorRoute.unprotected);
+
     }
 
 

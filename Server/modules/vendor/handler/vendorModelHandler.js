@@ -57,6 +57,8 @@ module.exports = {
                 return   Promise.reject(SharedEnum.errorMesaageCode["EUserCreatedFailed"]);
             })
 
-        }).catch((err)=>{});
+        }).catch((err)=>{
+            return   Promise.reject(SharedEnum.errorMesaageCode["EUserCreatedFailed"]);
+        });
     }
 }

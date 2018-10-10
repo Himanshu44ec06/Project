@@ -13,5 +13,4 @@ var  appObject =  app.start();
 app.registerRoutes(appObject);
 app.setUI(appObject,__dirname,'/UI/dist/UI');
 
-//app.registerRoutes(appObject);
 app.listen(appObject,env.configuration.ListeningPort);

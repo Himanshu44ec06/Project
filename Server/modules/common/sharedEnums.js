@@ -34,6 +34,12 @@ module.exports  = {
       "INACTIVE" :  5,
       "ACTIVEBUTNOBOOKING" : 6    
     },
+    vendorStepCreationStep  :  [
+      {  "STEP" : "REGISTER" , "STATUS" : 0,  REQUIRE : true, ORDER : 0 },
+        {"STEP" : "OTP", "STATUS" : 1 ,  REQUIRE :  true , ORDER : 1},
+         {"STEP"  : "SETPASSWORD" , STATUS : 2, REQUIRE : true, ORDER : 2 },
+       { "STEP" : "INFORMATION" , STATUS :  3,  REQUIRE :  false, ORDER :  3 }
+    ],
     errorMesaageCode  : {
         "EService01" : "EService01", // Service  name is  not correct
         "EService02" : "EService02", // Serice  name is  not unique
